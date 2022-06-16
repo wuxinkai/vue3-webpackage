@@ -1,0 +1,56 @@
+<template>
+  <!-- 展示外部图标 -->
+  <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" :class="className"></div>
+  <!-- 展示内部图标 -->
+  <svg v-else class="svg-icon" :class="className" aria-hidden="true">
+    <use :xlink:href="iconName" />
+  </svg>
+</template>
+
+<script setup>
+// 判断是不是外链资源
+import { isExternal as external } from '@/utils/validate'
+import { defineProps, computed } from 'vue'
+//接收父页面传过来的参数
+const props = defineProps({
+  // icon 图标
+  icon: {
+    type: String,
+    required: true
+  },
+  // 图标类名
+  className: {
+    type: String,
+    default: ''
+  }
+})
+
+// 判断是否是外部图标
+const isExternal = computed(() => external(props.icon))
+console.log(666,isExternal)
+//设置外部图标样式
+const styleExternalIcon = computed(() => ({
+  mask: `url(${props.icon}) no-repeat 50% 50%`,
+  '-weikit-mask': `url(${props.icon}) no-repeat 50% 50%`
+}))
+
+//项目内图标
+const iconName = computed(() => `#icon-${props.icon}`)
+
+</script>
+
+<style scoped>
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.svg-external-icon {
+  background-color: currentColor;
+  mask-size: cover !important;
+  display: inline-block;
+}
+</style>

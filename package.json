@@ -1,0 +1,47 @@
+{
+  "name": "my-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^1.0.1",
+    "axios": "^0.26.0",
+    "core-js": "^3.8.3",
+    "element-plus": "^2.0.4",
+    "md5": "^2.3.0",
+    "svg-sprite-loader": "^6.0.9",
+    "vue": "^3.2.13",
+    "vue-cli-plugin-element-plus": "~0.0.13",
+    "vue-router": "^4.0.15",
+    "vuex": "^4.0.2",
+    "css-color-function": "^1.3.3",
+    "rgb-hex": "^4.0.0",
+    "screenfull": "^5.1.0",
+    "fuse.js": "^6.4.6",
+    "sortablejs": "^1.14.0",
+    "driver.js": "^0.9.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "path-browserify": "^1.0.1",
+    "postcss": "^8.4.14",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "^3.0.24"
+  }
+}
